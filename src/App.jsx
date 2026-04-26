@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Castle from "./components/01_Castle";
-import Navbar from "./components/navbar";
+import Navbar from "./components/Navbar";
 import { MessageContext } from "./contexts/messageContexts/MessageContext";
 import SimpleProAsyncAwait from "./examples/async/SimpleProAsyncAwait";
 
@@ -152,7 +152,9 @@ function CastlePanel({
       <div className="w-full rounded border border-slate-600 bg-slate-800 p-6">
         <div className="grid gap-6 md:grid-cols-2">
           <div>
-            <p className="text-sm font-bold text-yellow-300">Message for Outside</p>
+            <p className="text-sm font-bold text-yellow-300">
+              Message for Outside
+            </p>
             <p className="mt-3 text-2xl text-white">
               {question || "Waiting for your message..."}
             </p>
@@ -165,7 +167,9 @@ function CastlePanel({
           </div>
 
           <div>
-            <p className="text-sm font-bold text-green-300">Reply from Secret Room</p>
+            <p className="text-sm font-bold text-green-300">
+              Reply from Secret Room
+            </p>
             <p className="mt-3 text-2xl text-white">
               {answer || "Waiting for a reply..."}
             </p>
@@ -191,7 +195,9 @@ function CastlePanel({
 
             {pokemon && !loading && !error && (
               <div className="mt-4 flex flex-col items-center rounded bg-slate-700 px-6 py-4 text-center">
-                <p className="text-sm text-white">A Pokemon answered the call</p>
+                <p className="text-sm text-white">
+                  A Pokemon answered the call
+                </p>
                 {pokemon.image && (
                   <img
                     src={pokemon.image}
@@ -199,7 +205,9 @@ function CastlePanel({
                     className="h-28 w-28 object-contain"
                   />
                 )}
-                <p className="text-2xl font-bold capitalize text-yellow-300">{pokemon.name}</p>
+                <p className="text-2xl font-bold capitalize text-yellow-300">
+                  {pokemon.name}
+                </p>
               </div>
             )}
           </div>
