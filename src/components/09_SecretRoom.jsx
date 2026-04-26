@@ -1,6 +1,9 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { MessageContext } from "../contexts/messageContexts/MessageContext";
 
-export default function SecretRoom({ question, answer, handleAnswer }) {
+export default function SecretRoom() {
+  const { question, answer, handleAnswer } = useContext(MessageContext);
+
   const [isDoorOpen, setIsDoorOpen] = useState(false);
 
   return (
